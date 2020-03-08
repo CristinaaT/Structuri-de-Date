@@ -1,0 +1,15 @@
+Descrierea variabilelor folosite
+Am ales sa folosesc vectori care se dubleaza in cazul in care dimensiunea devine mai mare decat capacitate curenta, folositi pentru stocarea listei de persoane si a listelor de vecini.
+Structura person_t reprezinta o persoana, avand nume, numar de vecini, capacitatea curenta a vectorului de vecini si vectorul cu acestia.
+
+Descrierea functiilor
+Functia find_person cauta o persoana dupa nume intr-un vector, dati ca paremetri (name si v) 
+Functia add_person redimensioneaza vectorul daca este necesar (p_capacity) si adauga o persoana cu un anumit nume intr-un vector, dati ca paremetri (name si v) 
+Functia add_neighbour redimensioneaza vectorul de vecini al persoanei respective (p_person) daca este necesar (p_capacity) si adauga un vecin in acest vector (index-ul acestuia)
+Functia dfs implementeaza algoritmul invatat la laborator: marcheaza persoanele deja vizitate si returneaza numarul acestora
+Functia less_than compara doua numere de tip int (intregi)
+
+Descrierea main-ului
+Am folosit argumente in linia de comanda, 3 mai exact, argv[0] fiind numele executabilului, primul argument "adevarat" este numele fisierului de intrare, argv[1], iar urmatorul este numele fisierului de iesire, argv[2].
+Dupa citire, cautam numarul de elemente conexe folosind dfs (acesta va fi numarul de familii), iar apoi vom stoca, tot intr-un vector care se redimensioneaza, numarul de membri din fiecare familie.
+Scriu raspunsurile in fisierul de iesire, eliberez memoria si inchid cele doua fisiere.
